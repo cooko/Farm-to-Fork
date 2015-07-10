@@ -1,0 +1,58 @@
+/**
+***
+*** Global
+***
+**/
+
+body {margin:0;}
+
+/**
+***
+*** Header
+***
+**/
+
+#header {
+	background-color: #3D3630;
+	height: 90px;
+	border-bottom: #bada55 solid 2px;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+/**
+***
+*** Footer
+***
+**/
+
+#footer{
+
+}
+
+/**
+***
+*** Landing
+***
+**/
+
+#landing.view {
+	background-color: black;
+}
+
+/**
+***
+*** Locations
+***
+**/
+
+#locations.view {
+	background-color: black;
+}
+
+#locations.searchbar{
+
+}
+#locations-map {
+	height:200px; width:100%;
+}

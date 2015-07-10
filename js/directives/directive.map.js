@@ -1,0 +1,1 @@
+app.directive("ng-map",function(){});
