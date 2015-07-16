@@ -14,7 +14,7 @@ body {margin:0;}
 
 #header {
 	background-color: #3D3630;
-	height: 90px;
+	height: 88px;
 	border-bottom: #bada55 solid 2px;
 	padding-left: 20%;
 	padding-right: 20%;
@@ -50,9 +50,19 @@ body {margin:0;}
 	background-color: black;
 }
 
-#locations.searchbar{
-
+#locations-searchbar{
+	width: 100%;
+	height: 75px;
+}
+#city-select {
+	width: 50%;
+}
+#location-select {
+	width: 50%;
 }
 #locations-map {
-	height:200px; width:100%;
+	position: absolute;
+	width:100%;
+	top: 165px;
+	bottom: 0px;
 }

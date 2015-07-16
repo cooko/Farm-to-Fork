@@ -1,4 +1,8 @@
 app.controller('MapController', function($scope) {
+		var cities = ["Guelph", "Kitchener"]
+		var test = "hi"
+		console.log(test)
+
 	$scope.$watch('$viewContentLoaded', function(){
 		var mapOptions = {
 			zoom: 12,
