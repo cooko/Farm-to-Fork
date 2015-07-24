@@ -8,9 +8,9 @@
 			<option ng-repeat="location in locations" value="location.name">{{location.name}}</option>
 		</select>
 	</div>
-	<map>
-		<marker ng-repeat="location in locations" name="{{location.name}}" lat="{{location.lat}}" lng="{{location.lng}}" ng-transclude>
-			<h1> {{name}} </h1>
+	<map id="map-canvas" ng-transclude>
+		<marker lat="{{locations[1].lat}}" lng="{{locations[1].lng}}" ng-transclude>
+				{{locations[1].name}}
 		</marker>
 	</map>
 </div>

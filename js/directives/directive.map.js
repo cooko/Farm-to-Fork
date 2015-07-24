@@ -6,28 +6,21 @@ app.directive("map", function(){
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	return {
-		scope: true,
 		transclude: true,
-		template: "<div id=map-canvas></div><div ng-transclude></div>",
 		controller: function($scope){
+			$scope.markers = []
 			$scope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-			this.addMarker = function(name, coords, html){
-				var infowindow = new google.maps.InfoWindow({
-					content: ""
-				});
-				var marker = new google.maps.Marker({
-					map: $scope.map,
-					position: new google.maps.LatLng(coords.lat,coords.lng),
-					title: name,
-					infowindow: html
-				});
-				google.maps.event.addListener(marker, 'click', function() {
-						infowindow.setContent(this.infowindow);
-						infowindow.open($scope.map, this);
-						$scope.map.setCenter(this.getPosition());
-				});
-			};
+			this.add_marker = function(marker){
+				marker.setMap($scope.map)
+				$scope.markers.push(marker);
+			}
+			this.clear_all = function(){
+
+			}
+			this.get = function(){
+				return($scope.map)
+			}
 		}
 	};
 });
