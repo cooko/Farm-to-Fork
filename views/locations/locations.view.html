@@ -1,11 +1,16 @@
-<div id="locations.view" ng-controller="MapController as map">
+<div id="locations.view" ng-controller="dataController">
 	<div id="locations-searchbar">
-		<select id="city-select">
-			<option ng-repeat="city in cities" value="city">{{city}}</option>
+		<select>
+			<option>Guelph</option>
+			<option>Waterloo</option>
 		</select>
-		<select id="location-select">
-			<option ng-repeat="location in locations" value="location">{{location}}</option>
+		<select>
+			<option ng-repeat="location in locations" value="location.name">{{location.name}}</option>
 		</select>
 	</div>
-	<div id="locations-map"></div>
+	<map>
+		<marker ng-repeat="location in locations" name="{{location.name}}" lat="{{location.lat}}" lng="{{location.lng}}" ng-transclude>
+			<h1> {{name}} </h1>
+		</marker>
+	</map>
 </div>

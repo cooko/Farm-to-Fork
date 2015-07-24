@@ -5,4 +5,4 @@ var app = angular.module('farm-to-fork',['ngRoute'])
 		.when('/landing', {templateUrl: '/views/landing/landing.view.html'})
 		.when('/locations', {templateUrl: '/views/locations/locations.view.html'})
 		.otherwise({templateUrl: '/views/landing/landing.view.html'});
-});
+})
