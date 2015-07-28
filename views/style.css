@@ -60,7 +60,7 @@ marker {display:none;}
 #location-select {
 	width: 50%;
 }
-#map-canvas {
+map {
 	position: absolute;
 	width:100%;
 	top: 165px;

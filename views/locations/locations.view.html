@@ -5,12 +5,13 @@
 			<option>Waterloo</option>
 		</select>
 		<select>
-			<option ng-repeat="location in locations" value="location.name">{{location.name}}</option>
+			<option ng-repeat="location in locations" value="location.name">{{location.name}}
+			</option>
 		</select>
 	</div>
-	<map id="map-canvas" ng-transclude>
+	<map ng-transclude>
 		<marker lat="{{locations[1].lat}}" lng="{{locations[1].lng}}" ng-transclude>
-				{{locations[1].name}}
+			{{locations[1].name}}				
 		</marker>
 	</map>
 </div>
